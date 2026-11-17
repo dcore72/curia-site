@@ -85,13 +85,13 @@ body.menu-open{overflow:hidden}
 @keyframes up{to{transform:none}}
 .hero .sub{margin:0;font-size:20px;line-height:1.45;color:var(--mu2);max-width:520px}
 .hero .note{display:block;margin-top:14px;color:var(--mu);font-size:13px;letter-spacing:.04em}
-.hero .def{margin:32px 0 0;font:700 clamp(22px,2.3vw,34px)/1.2 var(--sans);color:#F2F0EB;max-width:22em;text-wrap:balance}
-.hero .def em{font-style:normal;color:var(--or)}
-.hero .facts{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.hero .facts li{font-size:14px;line-height:1;color:#E6E3DC;padding:10px 14px;border:1px solid rgba(242,240,235,.22);border-radius:999px;background:rgba(5,5,5,.35);backdrop-filter:blur(6px)}
-.hero .facts b{color:var(--or);font-weight:700}
-.hv-a .def{margin-left:auto;margin-right:auto}.hv-a .facts{justify-content:center}
-@media(max-width:600px){.hero-p.hv-c{padding-bottom:56px;padding-top:96px}.hv-a .ctas .cta.o{display:none}.hv-a .ctas{margin-top:28px}.hero .facts li:nth-child(3){display:none}.hero .def{margin-top:22px;font-size:20px}.hero .facts{margin-top:16px;gap:6px}.hero .facts li{font-size:12.5px;padding:8px 11px}}
+.hv-c1 .sub{font:700 clamp(22px,2.2vw,32px)/1.22 var(--sans);color:#F2F0EB;max-width:21em;text-wrap:balance}
+.hv-c1 .sub em,.hv-c2 h1 .or2{font-style:normal;color:var(--or)}
+.hv-c2 .sub{color:#F2F0EB;font-size:21px;max-width:30em}
+.hv-c2 .sub b{display:block;font:800 clamp(22px,2.2vw,30px)/1.15 var(--disp);font-stretch:115%;text-transform:uppercase;color:var(--or);margin-bottom:12px}
+.hv-c3 .card .bb.id{background:#24384d;font-weight:600}
+@media(max-width:900px){.hv-c3 .bb.id{display:block}}
+@media(max-width:600px){.hero-p.hv-c2{padding-top:92px;padding-bottom:48px}.hv-c2 h1{font-size:44px}.hv-c2 .sub{font-size:16px;margin-top:22px}.hv-c2 .sub b{font-size:18px;margin-bottom:8px}}
 /* text hero (partners) */
 .hero-a .row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:56px;padding-top:28px;border-top:1px solid var(--ln)}
 .hero-a .act{text-align:right}
@@ -383,6 +383,32 @@ footer{padding-top:80px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0p
 .capC b{color:var(--wh)}
 @media(max-width:900px){.botC,.capC{grid-template-columns:1fr}.pan{min-height:auto}.noise .feed{max-height:300px}}
 
+
+/* ===== bot: refined A (two flows) ===== */
+.botR{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center;margin-top:56px}
+.flows{display:grid;grid-template-columns:1fr 1fr;gap:28px;justify-items:center}
+.flow{width:100%;max-width:340px;min-width:0}
+.fc{display:flex;gap:10px;align-items:baseline;margin:0 0 16px;font:700 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mu2)}
+.fc em{font-style:normal;color:var(--or)}
+.flow .tgph{width:100%;height:680px}
+.bm a.lk{color:#6AB2F2;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.rich .s{font-size:12.5px;color:#9fb0c0;margin-top:4px}
+.kbd i{transition:background .3s,box-shadow .3s}
+.kbd.hit i.p{box-shadow:0 0 0 3px rgba(255,90,31,.35)}
+.tgin2{display:flex;align-items:center;gap:10px;padding:8px 12px 20px;background:#17212B;color:#6d7f8f}
+.tgin2 .f{flex:1;font-size:13.5px;background:#0E1621;border-radius:18px;padding:9px 13px;color:#6d7f8f}
+.pin{display:flex;gap:10px;align-items:center;padding:8px 14px;background:#17212B;border-bottom:1px solid rgba(0,0,0,.35);font-size:12.5px;color:#c9d3dd}
+.pin i{width:2px;align-self:stretch;background:var(--or);border-radius:2px}
+.pin b{display:block;color:var(--or);font-size:11.5px;font-weight:700}
+.typing{display:flex;align-items:center;gap:8px;padding:10px 16px 22px;background:#0E1621;font-size:12px;color:#7d96ad}
+.typing span{display:inline-flex;gap:3px}
+.typing span i{width:5px;height:5px;border-radius:50%;background:#7d96ad;opacity:.4}
+@media (prefers-reduced-motion:no-preference){.typing span i{animation:tp 1.2s infinite}.typing span i:nth-child(2){animation-delay:.2s}.typing span i:nth-child(3){animation-delay:.4s}}
+@keyframes tp{50%{opacity:1}}
+@media(max-width:1100px){.botR{grid-template-columns:1fr;gap:48px}}
+@media(max-width:700px){.flows{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding-bottom:8px;justify-items:initial}
+ .flow{flex:0 0 86%;scroll-snap-align:start}.flow .tgph{height:660px}}
+
 /* numbers — fits one screen */
 #numbers{padding-top:96px;padding-bottom:96px}
 #numbers .sh h2{font-size:clamp(40px,5.2vw,88px)}
@@ -410,7 +436,7 @@ footer{padding-top:80px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0p
 </div></header>
 <div class="mnav" id="mnav"><a class="l" href="#club">Club</a><a class="l" href="#bot">How we talk</a><a class="l" href="#evenings">Evenings</a><div class="aud" role="navigation" aria-label="Audience"><a href="index.html" class="on">Operators</a><a href="partners.html">Partners</a></div><a class="cta" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Join via Telegram ↗</a></div>
 <main>
-<section class="hero hero-p hv-b"><div class="in"><div class="hl"><h1 class="D"><span><em>People open doors</em></span><span><em class="or">money can’t.</em></span></h1><p class="def">The private <em>business club</em> for owners and C‑LVL of iGaming, Forex &amp; Adult operators.</p><ul class="facts"><li><b>500+</b> key industry leaders</li><li>Vetted partners on member terms</li><li>Deal‑making evenings</li></ul></div><aside class="side"><a class="cta" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Join via Telegram ↗</a><span class="note">Free for operators · 2 minutes</span></aside></div></section>
+<section class="hero hero-p hv-b"><div class="in"><div class="hl"><h1 class="D"><span><em>People open doors</em></span><span><em class="or">money can’t.</em></span></h1></div><aside class="side"><p class="sub">Curia is a private business club for owners and C‑level of iGaming, Forex and Adult operators.</p><a class="cta" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Join via Telegram ↗</a><span class="note">Free for operators · 2 minutes</span></aside></div></section>
 <div class="mq" aria-hidden="true"><div class="t D" data-dup><span>Business club</span><b>✦</b><span>iGaming</span><b>✦</b><span>Forex</span><b>✦</b><span>Adult</span><b>✦</b><span>Owners</span><b>✦</b><span>C‑level</span><b>✦</b><span>Deals</span><b>✦</b><span>Member terms</span><b>✦</b></div></div>
 
 <section class="sec wrap" id="club">
@@ -439,28 +465,28 @@ footer{padding-top:80px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0p
 </section>
 
 <section class="sec wrap" id="bot">
-  <div class="sh"><h2 class="D rv">Not another<br><span class="or">group chat.</span></h2>
-  <p class="lead rv">No spam, no noise, no endless channels. One personal bot — you ask, we answer, and only what is relevant reaches you.</p></div>
-  <div class="bot">
-    <div class="list bl">
-      <div class="rv"><s>Group chats</s><span><b>One private line</b>Your requests and answers stay between you and Curia.</span></div>
-      <div class="rv"><s>Cold pitches</s><span><b>Intros you asked for</b>Tell us the task — get one vetted partner, not ten sales calls.</span></div>
-      <div class="rv"><s>Mass mailings</s><span><b>Invitations, personally</b>Evenings and member offers come to you directly.</span></div>
-      <div class="rv"><s>Lost contacts</s><span><b>Everything in one place</b>Requests, intros, offers and invitations in Telegram.</span></div>
-    </div>
-    <div class="ph rv"><div class="phone" role="img" aria-label="Preview of a conversation with the Curia bot in Telegram"><div class="screen">
-      <div class="tg-top"><span class="tg-av"><svg width="22" height="14" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg></span><span><b>Curia</b><span>bot</span></span></div>
-      <div class="chat" id="chat" data-play data-keep="6">
-        <div class="msg b" data-step>Welcome to Curia. A few questions about you and your project — two minutes.</div>
-        <div class="msg b" data-step>What’s your role?<div class="kb"><i>Owner</i><i>CEO</i><i>COO</i><i>CMO</i></div></div>
-        <div class="msg m" data-step>Owner</div>
-        <div class="msg b" data-step>Thank you — we review every application personally.</div>
-        <div class="msg o" data-step>✓ Welcome to Curia. Your member offers are open.</div>
-        <div class="msg m" data-step>Need a PSP for Brazil, pre‑launch.</div>
-        <div class="msg b" data-step>One vetted partner on member terms. Shall we make the intro?</div>
-      </div>
-    </div></div></div>
-  </div>
+<div class="sh"><h2 class="D rv">Not another<br><span class="or">group chat.</span></h2>
+<p class="lead rv">One private line to the club. You bring a task — we come back with a vetted partner, member terms or an invitation.</p></div>
+<div class="botR"><div class="list bl">
+  <div class="rv"><s>Group chats</s><span><b>One private line</b>Your requests stay between you and the club.</span></div>
+  <div class="rv"><s>Cold pitches</s><span><b>Intros you asked for</b>One vetted partner for your task — on member terms.</span></div>
+  <div class="rv"><s>Mass mailings</s><span><b>Invitations, personally</b>Private evenings come to members first.</span></div>
+  <div class="rv"><s>Lost contacts</s><span><b>Deals, not threads</b>Every intro gets its own group with a curator.</span></div>
+</div><div class="flows">
+  <div class="flow rv"><p class="fc"><em>01</em>Intro on request</p><div class="tgph" role="img" aria-label="A member asks Curia for a PSP for Brazil and receives a group invite link with the partner"><div class="tgsc"><div class="tgbar"><span class="av"><svg width="22" height="14" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg></span><span><b>Curia <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6AB2F2" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.4 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path d="M7.5 12.2l3 3 6-6" stroke="#0E1621" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></b><span class="s">bot · private line</span></span></div>
+<div class="tgbody" data-play data-keep="9" data-gap="1700"><span class="tgday" data-step>Today</span>
+<div class="bm out" data-step>We launch in Brazil next quarter. Need a PSP with local methods.<time>10:42</time></div>
+<div class="bm in" data-step>Noted. One partner from Curia Circle fits your stage and market.<time>10:44</time></div>
+<div class="rich" data-step><div class="rh"><div class="k">Intro · Payments</div><div class="t">PSP for Brazil</div>
+  <ul><li>Curia reputation: 3 intros</li><li>Pix, boleto + cards</li><li>Member terms for Curia residents</li></ul></div></div>
+<div class="kbd" data-step><i class="p">Request intro</i><i>Not now</i></div>
+<div class="bm in" data-step>Done. Here is your group invite link: <a class="lk" href="#bot" tabindex="-1">t.me/+R4kq9VxL</a><time>10:45</time></div></div><div class="tgin2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 11.5l-7.8 7.8a5 5 0 01-7.1-7.1l8.5-8.5a3.3 3.3 0 014.7 4.7l-8.5 8.5a1.7 1.7 0 01-2.4-2.4l7.8-7.8"/></svg><span class="f">Message</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div></div></div></div>
+  <div class="flow rv"><p class="fc"><em>02</em>Private evening</p><div class="tgph" role="img" aria-label="A member receives an invitation to a private Curia evening and reserves a seat"><div class="tgsc"><div class="tgbar"><span class="av"><svg width="22" height="14" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg></span><span><b>Curia <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6AB2F2" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.4 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path d="M7.5 12.2l3 3 6-6" stroke="#0E1621" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></b><span class="s">bot · private line</span></span></div>
+<div class="tgbody" data-play data-keep="9" data-gap="1700"><span class="tgday" data-step>Thursday</span>
+<div class="rich" data-step><picture><source srcset="img/r_dome.webp" type="image/webp"><img src="img/r_dome.jpg" alt="Rooftop at a Curia private evening" width="547" height="820" loading="lazy" decoding="async"></picture><div class="rh"><div class="k">Invitation · Members first</div><div class="t">Private evening at the next major conference</div><div class="s">By invitation · limited seats</div></div></div>
+<div class="kbd" data-step><i class="p">Reserve a seat</i><i>Not this time</i></div>
+<div class="bm in" data-step>Your seat is reserved. Venue and time come here two days before the evening.<time>18:06</time></div></div><div class="tgin2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 11.5l-7.8 7.8a5 5 0 01-7.1-7.1l8.5-8.5a3.3 3.3 0 014.7 4.7l-8.5 8.5a1.7 1.7 0 01-2.4-2.4l7.8-7.8"/></svg><span class="f">Message</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div></div></div></div>
+</div></div>
 </section>
 
 <section class="sec" id="evenings" style="padding-left:0;padding-right:0">
