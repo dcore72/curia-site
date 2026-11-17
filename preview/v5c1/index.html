@@ -30,7 +30,7 @@
 :root{--bk:#050505;--bk2:#0F0F0F;--bk3:#161616;--wh:#F2F0EB;--mu:#8C8A85;--mu2:#BDBAB4;--ln:rgba(242,240,235,.14);--or:#FF5A1F;
   --disp:'Archivo','Arial Black',Impact,sans-serif;--sans:'Lato','Helvetica Neue',Arial,sans-serif;color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{overflow-x:clip;scroll-behavior:smooth}
 body{margin:0;background:var(--bk);color:var(--wh);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 img{display:block;max-width:100%}
@@ -89,8 +89,14 @@ body.menu-open{overflow:hidden}
 .hv-c1 .sub em,.hv-c2 h1 .or2{font-style:normal;color:var(--or)}
 .hv-c2 .sub{color:#F2F0EB;font-size:21px;max-width:30em}
 .hv-c2 .sub b{display:block;font:800 clamp(22px,2.2vw,30px)/1.15 var(--disp);font-stretch:115%;text-transform:uppercase;color:var(--or);margin-bottom:12px}
-.hv-c3 .card .bb.id{background:#24384d;font-weight:600}
-@media(max-width:900px){.hv-c3 .bb.id{display:block}}
+.hero-p.hv-c3 .in{grid-template-columns:minmax(0,1fr) 400px;align-items:center;gap:64px}
+.hero-p.hv-c3 h1{font-size:clamp(44px,5.6vw,96px);line-height:.92}
+.hero-p.hv-c3 .card{padding:22px}
+.hero-p.hv-c3 .card .bb{font-size:16px}
+.hero-p.hv-c3 .card .bb.id{background:#24384d;font-weight:700;font-size:17px;line-height:1.38;max-width:100%}
+.hero-p.hv-c3 .card .note{margin-top:12px}
+@media(max-width:600px){.hero-p.hv-c3{padding-top:96px;padding-bottom:56px}}
+@media(max-width:900px){.hero-p.hv-c3 .in{grid-template-columns:1fr;gap:28px}.hero-p.hv-c3 .bb{display:block}.hero-p.hv-c3 .card .bb.id{font-size:16px}.hero-p.hv-c3 .card .bb{font-size:15px}}
 @media(max-width:600px){.hero-p.hv-c2{padding-top:92px;padding-bottom:48px}.hv-c2 h1{font-size:44px}.hv-c2 .sub{font-size:16px;margin-top:22px}.hv-c2 .sub b{font-size:18px;margin-bottom:8px}}
 /* text hero (partners) */
 .hero-a .row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:56px;padding-top:28px;border-top:1px solid var(--ln)}
@@ -295,7 +301,7 @@ a.ti:hover{color:#050505}a.ti:hover .k{color:#050505}
 .contacts a{text-decoration:none}
 
 footer{padding-top:80px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))}
-.fw{font-size:clamp(90px,27vw,520px);line-height:.78;margin:0;letter-spacing:-.03em}
+.fw{font-size:min(21.5vw,440px);white-space:nowrap;line-height:.78;margin:0;letter-spacing:-.03em}
 .fw .o{color:var(--or)}
 .fbar{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;font:700 12px/1.6 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu)}
 .fbar a{text-decoration:none}.fbar a:hover{color:var(--wh)}
@@ -409,6 +415,20 @@ footer{padding-top:80px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0p
 @media(max-width:700px){.flows{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding-bottom:8px;justify-items:initial}
  .flow{flex:0 0 86%;scroll-snap-align:start}.flow .tgph{height:660px}}
 
+
+/* evenings: invitation card */
+.ev-inv{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:72px;align-items:end;margin-top:56px}
+.evl{min-width:0}
+.inv{background:#0E1621;border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.45)}
+.inv img{display:block;width:100%;height:170px;object-fit:cover}
+.inv .b{padding:16px 18px 18px}
+.inv .k{font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--or)}
+.inv .t{font:700 18px/1.25 var(--sans);margin-top:8px}
+.inv .s{font-size:14px;color:#9fb0c0;margin-top:4px}
+.inv .cta{width:100%;margin-top:16px}
+.inv-cap{margin:12px 0 0;font-size:13px;color:var(--mu);text-align:center}
+@media(max-width:900px){.ev-inv{grid-template-columns:1fr;gap:32px}.ev-inv .invw{max-width:360px}}
+
 /* numbers — fits one screen */
 #numbers{padding-top:96px;padding-bottom:96px}
 #numbers .sh h2{font-size:clamp(40px,5.2vw,88px)}
@@ -472,36 +492,33 @@ footer{padding-top:80px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0p
 
 <section class="sec wrap" id="bot">
 <div class="sh"><h2 class="D rv">Not another<br><span class="or">group chat.</span></h2>
-<p class="lead rv">One private line to the club. You bring a task — we come back with a vetted partner, member terms or an invitation.</p></div>
-<div class="botR"><div class="list bl">
+<p class="lead rv">One private line to the club. You bring a task — we come back with a vetted partner and member terms.</p></div>
+<div class="botA"><div class="list bl">
   <div class="rv"><s>Group chats</s><span><b>One private line</b>Your requests stay between you and the club.</span></div>
   <div class="rv"><s>Cold pitches</s><span><b>Intros you asked for</b>One vetted partner for your task — on member terms.</span></div>
   <div class="rv"><s>Mass mailings</s><span><b>Invitations, personally</b>Private evenings come to members first.</span></div>
   <div class="rv"><s>Lost contacts</s><span><b>Deals, not threads</b>Every intro gets its own group with a curator.</span></div>
-</div><div class="flows">
-  <div class="flow rv"><p class="fc"><em>01</em>Intro on request</p><div class="tgph" role="img" aria-label="A member asks Curia for a PSP for Brazil and receives a group invite link with the partner"><div class="tgsc"><div class="tgbar"><span class="av"><svg width="22" height="14" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg></span><span><b>Curia <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6AB2F2" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.4 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path d="M7.5 12.2l3 3 6-6" stroke="#0E1621" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></b><span class="s">bot · private line</span></span></div>
+</div><div class="ph rv"><div class="tgph" role="img" aria-label="A member asks Curia for a PSP for Brazil and receives a group invite link with the partner"><div class="tgsc"><div class="tgbar"><span class="av"><svg width="22" height="14" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg></span><span><b>Curia <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6AB2F2" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.4 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path d="M7.5 12.2l3 3 6-6" stroke="#0E1621" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></b><span class="s">bot · private line</span></span></div>
 <div class="tgbody" data-play data-keep="9" data-gap="1700"><span class="tgday" data-step>Today</span>
 <div class="bm out" data-step>We launch in Brazil next quarter. Need a PSP with local methods.<time>10:42</time></div>
 <div class="bm in" data-step>Noted. One partner from Curia Circle fits your stage and market.<time>10:44</time></div>
 <div class="rich" data-step><div class="rh"><div class="k">Intro · Payments</div><div class="t">PSP for Brazil</div>
   <ul><li>Curia reputation: 3 intros</li><li>Pix, boleto + cards</li><li>Member terms for Curia residents</li></ul></div></div>
 <div class="kbd" data-step><i class="p">Request intro</i><i>Not now</i></div>
-<div class="bm in" data-step>Done. Here is your group invite link: <a class="lk" href="#bot" tabindex="-1">t.me/+R4kq9VxL</a><time>10:45</time></div></div><div class="tgin2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 11.5l-7.8 7.8a5 5 0 01-7.1-7.1l8.5-8.5a3.3 3.3 0 014.7 4.7l-8.5 8.5a1.7 1.7 0 01-2.4-2.4l7.8-7.8"/></svg><span class="f">Message</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div></div></div></div>
-  <div class="flow rv"><p class="fc"><em>02</em>Private evening</p><div class="tgph" role="img" aria-label="A member receives an invitation to a private Curia evening and reserves a seat"><div class="tgsc"><div class="tgbar"><span class="av"><svg width="22" height="14" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg></span><span><b>Curia <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6AB2F2" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.4 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path d="M7.5 12.2l3 3 6-6" stroke="#0E1621" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></b><span class="s">bot · private line</span></span></div>
-<div class="tgbody" data-play data-keep="9" data-gap="1700"><span class="tgday" data-step>Thursday</span>
-<div class="rich" data-step><picture><source srcset="img/r_dome.webp" type="image/webp"><img src="img/r_dome.jpg" alt="Rooftop at a Curia private evening" width="547" height="820" loading="lazy" decoding="async"></picture><div class="rh"><div class="k">Invitation · Members first</div><div class="t">Private evening at the next major conference</div><div class="s">By invitation · limited seats</div></div></div>
-<div class="kbd" data-step><i class="p">Reserve a seat</i><i>Not this time</i></div>
-<div class="bm in" data-step>Your seat is reserved. Venue and time come here two days before the evening.<time>18:06</time></div></div><div class="tgin2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 11.5l-7.8 7.8a5 5 0 01-7.1-7.1l8.5-8.5a3.3 3.3 0 014.7 4.7l-8.5 8.5a1.7 1.7 0 01-2.4-2.4l7.8-7.8"/></svg><span class="f">Message</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div></div></div></div>
-</div></div>
+<div class="bm in" data-step>Done. Here is your group invite link: <a class="lk" href="#bot" tabindex="-1">t.me/+R4kq9VxL</a><time>10:45</time></div></div><div class="tgin2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 11.5l-7.8 7.8a5 5 0 01-7.1-7.1l8.5-8.5a3.3 3.3 0 014.7 4.7l-8.5 8.5a1.7 1.7 0 01-2.4-2.4l7.8-7.8"/></svg><span class="f">Message</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6d7f8f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div></div></div></div></div>
 </section>
 
 <section class="sec" id="evenings" style="padding-left:0;padding-right:0">
   <div class="wrap">
     <div class="sh"><h2 class="D rv">Where the industry<br><span class="or">actually talks.</span></h2>
     <p class="lead rv">Private evenings on the dates of the major conferences. Different cities, the same rule: a small room of people who decide.</p></div>
-    <div class="ev-top"><div class="facts rv"><span>Major conferences</span><span>Invitation only</span><span>Members first</span><span>Food · Bar · Music</span></div></div>
-    <!-- Upcoming evenings: edit EVENTS in gen.py (date · city · name). Past events are not listed. -->
-    <ul class="dates" id="dates"><li><b>Date TBA</b><span>City TBA</span><span>Next Curia evening</span></li><li><b>Date TBA</b><span>City TBA</span><span>Curia evening</span></li></ul>
+    <div class="ev-inv">
+      <div class="evl"><div class="ev-top" style="margin-top:0"><div class="facts rv"><span>Major conferences</span><span>Invitation only</span><span>Members first</span><span>Food · Bar · Music</span></div></div>
+      <!-- Upcoming evenings: edit EVENTS in gen.py (date · city · name). Past events are not listed. -->
+      <ul class="dates" id="dates" style="margin-top:40px"><li><b>Date TBA</b><span>City TBA</span><span>Next Curia evening</span></li><li><b>Date TBA</b><span>City TBA</span><span>Curia evening</span></li></ul></div>
+      <div class="invw rv"><div class="inv" role="img" aria-label="Invitation to a private Curia evening in the Curia bot"><picture><source srcset="img/r_dome.webp" type="image/webp"><img src="img/r_dome.jpg" alt="" width="547" height="820" loading="lazy" decoding="async"></picture><div class="b"><div class="k">Invitation · Members first</div><div class="t">Private evening at the next major conference</div><div class="s">By invitation · limited seats</div><span class="cta">Reserve a seat</span></div></div>
+      <p class="inv-cap">Invitations arrive in the Curia bot — one tap to reserve.</p></div>
+    </div>
   </div>
   <div class="reel"><div class="rt" data-dup><picture><source srcset="img/r_terrace.webp" type="image/webp"><img src="img/r_terrace.jpg" alt="Curia evening on a rooftop above Rome at night" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_group.webp" type="image/webp"><img src="img/l_group.jpg" alt="Members on the Curia yacht in Lisbon" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_sibilla.webp" type="image/webp"><img src="img/r_sibilla.jpg" alt="Tarot reading at a Curia evening in Rome" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_bridge.webp" type="image/webp"><img src="img/l_bridge.jpg" alt="Lisbon bridge seen from the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_cocktails.webp" type="image/webp"><img src="img/r_cocktails.jpg" alt="Signature cocktails served at a Curia evening" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_trio.webp" type="image/webp"><img src="img/l_trio.jpg" alt="Three guests talking on the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_cigar.webp" type="image/webp"><img src="img/r_cigar.jpg" alt="Guest lighting a cigar at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_oysters.webp" type="image/webp"><img src="img/l_oysters.jpg" alt="Oysters served on the Curia yacht" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_dome.webp" type="image/webp"><img src="img/r_dome.jpg" alt="Guests on a Rome rooftop with a basilica dome behind" width="547" height="820" loading="lazy" decoding="async"></picture></div><div class="rt two" data-dup><picture><source srcset="img/r_dj.webp" type="image/webp"><img src="img/r_dj.jpg" alt="Live DJ set at a Curia evening" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_talk.webp" type="image/webp"><img src="img/l_talk.jpg" alt="Two members in conversation in Lisbon" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_cube2.webp" type="image/webp"><img src="img/r_cube2.jpg" alt="The glowing Curia light cube" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_couple.webp" type="image/webp"><img src="img/l_couple.jpg" alt="Guests at sunset on the Curia yacht" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_talk3.webp" type="image/webp"><img src="img/r_talk3.jpg" alt="Members in conversation at a Curia evening" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_fun.webp" type="image/webp"><img src="img/l_fun.jpg" alt="Guests laughing on the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_bar.webp" type="image/webp"><img src="img/r_bar.jpg" alt="Bartender pouring a drink at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_sun.webp" type="image/webp"><img src="img/l_sun.jpg" alt="Guest on deck of the Curia yacht in the sun" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_crowd.webp" type="image/webp"><img src="img/r_crowd.jpg" alt="Guests on the terrace at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture></div></div>
 </section>
