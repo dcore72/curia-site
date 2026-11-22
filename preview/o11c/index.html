@@ -832,114 +832,121 @@ footer{padding-top:80px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0p
 @media(max-width:900px){.pbg{grid-template-columns:1fr;gap:32px}.pbg .dgf{max-width:420px;justify-self:center}.pb3{padding-block:64px}.pb3b{grid-template-columns:1fr;padding:28px 22px}.pb3b .r{justify-items:start}.pb3b .pk{grid-template-columns:1fr;gap:16px}.pbl li{grid-template-columns:32px 1fr}.pbl span{grid-column:2;text-align:left}}
 .pb1 .pke{justify-content:flex-start}.pbg .sh h2{font-size:clamp(40px,5vw,84px)}
 @media(max-width:900px){.pbg .dgf{order:2}}
-.csg{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.cs{border:1px solid var(--ln);border-radius:18px;padding:28px 28px 26px;display:flex;flex-direction:column;gap:18px;min-height:220px;background:#080808}
-.cs .k{font:700 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mu2)}
-.cs b{font-size:clamp(20px,1.9vw,28px);line-height:1.08;text-transform:none;letter-spacing:-.01em;flex:1}
-.cs .m{display:flex;align-items:center;gap:10px;font:700 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
-.cs .m i{width:8px;height:8px;border-radius:50%;background:var(--or);flex:none}
-@media (prefers-reduced-motion:no-preference){.cs{animation:csl 12s ease-in-out infinite;animation-delay:var(--d)}}
+#cases .csg{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+#cases .cs{border:1px solid var(--ln);border-radius:18px;padding:28px 28px 26px;display:flex;flex-direction:column;gap:18px;min-height:220px;background:#080808}
+#cases .cs .k{font:700 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mu2)}
+#cases .cs b{font-size:clamp(20px,1.9vw,28px);line-height:1.08;text-transform:none;letter-spacing:-.01em;flex:1}
+#cases .cs .m{display:flex;align-items:center;gap:10px;font:700 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
+#cases .cs .m i{width:8px;height:8px;border-radius:50%;background:var(--or);flex:none}
+@media (prefers-reduced-motion:no-preference){#cases .cs{animation:csl 12s ease-in-out infinite;animation-delay:var(--d)}}
 @keyframes csl{0%,100%{border-color:var(--ln)}4%,14%{border-color:rgba(255,90,31,.9)}22%{border-color:var(--ln)}}
 .bcd{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:56px;padding:112px 0 56px}
 .bcd .sh h2{margin:0}.bcd>.wrap{width:100%;box-sizing:border-box}
 .bcd .reel{margin-top:0}.bcd .reel img{height:min(30vh,320px)}
 @media(max-width:900px){.csg{grid-template-columns:1fr;gap:14px;margin-top:40px}.cs{min-height:0;padding:22px}.bcd{min-height:0;padding:80px 0 48px;gap:36px}.bcd .reel img{height:min(28vh,220px)}}
 /* growth variants */
-.gtl{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ln);border-left:1px solid var(--ln)}
-.gtl li{border-right:1px solid var(--ln);border-bottom:1px solid var(--ln);padding:28px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;transition:background .4s}
-.gtl b{font-size:clamp(20px,2vw,30px);line-height:1;text-transform:uppercase}
-.gtl span{display:flex;align-items:center;gap:10px;font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--or)}
-.gtl i{width:8px;height:8px;border-radius:50%;background:var(--or)}
-@media (prefers-reduced-motion:no-preference){.gtl li{animation:gtl 9.6s ease-in-out infinite;animation-delay:var(--d)}.gtl li b,.gtl li span{animation:gtt 9.6s ease-in-out infinite;animation-delay:var(--d)}.gtl li i{animation:gti 9.6s ease-in-out infinite;animation-delay:var(--d)}}
+:is(#how,#cases) .gtl{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ln);border-left:1px solid var(--ln)}
+:is(#how,#cases) .gtl li{border-right:1px solid var(--ln);border-bottom:1px solid var(--ln);padding:28px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;transition:background .4s}
+:is(#how,#cases) .gtl b{font-size:clamp(20px,2vw,30px);line-height:1;text-transform:uppercase}
+:is(#how,#cases) .gtl span{display:flex;align-items:center;gap:10px;font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--or)}
+:is(#how,#cases) .gtl i{width:8px;height:8px;border-radius:50%;background:var(--or)}
+@media (prefers-reduced-motion:no-preference){:is(#how,#cases) .gtl li{animation:gtl 9.6s ease-in-out infinite;animation-delay:var(--d)}:is(#how,#cases) .gtl li b,:is(#how,#cases) .gtl li span{animation:gtt 9.6s ease-in-out infinite;animation-delay:var(--d)}:is(#how,#cases) .gtl li i{animation:gti 9.6s ease-in-out infinite;animation-delay:var(--d)}}
 @keyframes gtl{0%,100%{background:transparent}4%,11%{background:var(--or)}16%{background:transparent}}
 @keyframes gtt{0%,100%{color:inherit}4%,11%{color:#050505}16%{color:inherit}}
 @keyframes gti{0%,100%{background:var(--or)}4%,11%{background:#050505}16%{background:var(--or)}}
-.gtl li span{color:var(--or)}
-.gs{position:relative;margin-top:72px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-top:28px}
-.gs .ln{position:absolute;left:0;right:0;top:0;height:2px;background:var(--ln);overflow:hidden}
-.gs .ln i{position:absolute;inset:0;background:var(--or);transform-origin:left;animation:gsl 8.8s linear infinite}
+:is(#how,#cases) .gtl li span{color:var(--or)}
+:is(#how,#cases) .gs{position:relative;margin-top:72px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-top:28px}
+:is(#how,#cases) .gs .ln{position:absolute;left:0;right:0;top:0;height:2px;background:var(--ln);overflow:hidden}
+:is(#how,#cases) .gs .ln i{position:absolute;inset:0;background:var(--or);transform-origin:left;animation:gsl 8.8s linear infinite}
 @keyframes gsl{0%{transform:scaleX(0)}90%,100%{transform:scaleX(1)}}
-.gc .n{display:block;font:800 clamp(16px,1.4vw,20px)/1.1 var(--disp);font-stretch:115%;text-transform:uppercase;margin-bottom:22px}
-.gc .n em{display:block;font:700 11px/1 var(--sans);font-style:normal;letter-spacing:.16em;color:var(--or);margin-bottom:10px}
-.gc ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.gc li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--ln);border-radius:12px;font:600 16px/1.1 var(--sans)}
-.gc li i{font:700 10px/1 var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--or);white-space:nowrap}
-@media (prefers-reduced-motion:no-preference){.gc li{animation:gcl 9.9s ease-in-out infinite;animation-delay:var(--d)}}
+:is(#how,#cases) .gc .n{display:block;font:800 clamp(16px,1.4vw,20px)/1.1 var(--disp);font-stretch:115%;text-transform:uppercase;margin-bottom:22px}
+:is(#how,#cases) .gc .n em{display:block;font:700 11px/1 var(--sans);font-style:normal;letter-spacing:.16em;color:var(--or);margin-bottom:10px}
+:is(#how,#cases) .gc ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+:is(#how,#cases) .gc li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--ln);border-radius:12px;font:600 16px/1.1 var(--sans)}
+:is(#how,#cases) .gc li i{font:700 10px/1 var(--sans);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--or);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){:is(#how,#cases) .gc li{animation:gcl 9.9s ease-in-out infinite;animation-delay:var(--d)}}
 @keyframes gcl{0%,100%{border-color:var(--ln)}3%,10%{border-color:var(--or)}15%{border-color:var(--ln)}}
-.gq .gm{margin-top:56px;overflow:hidden}.gq .gm.two{margin-top:18px}
-.gq .gm .t{display:flex;align-items:center;gap:36px;width:max-content;animation:mq 46s linear infinite;font-size:clamp(48px,7vw,112px);line-height:1;text-transform:uppercase}
-.gq .gm.two .t{animation-direction:reverse;color:transparent;-webkit-text-stroke:1.5px rgba(242,240,235,.55)}
-.gq .gm em{font:700 13px/1 var(--sans);font-style:normal;letter-spacing:.16em;color:#050505;background:var(--or);padding:10px 14px;border-radius:999px;-webkit-text-stroke:0;white-space:nowrap}
-.gq .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-/* requests variants */
-.rq1,.rq2,.rq3,.rq4{list-style:none;margin:64px 0 0;padding:0}
-.rq1{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.ch{border:1px solid var(--ln);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:14px;background:#0B0B0B;min-height:250px}
-.ch .k{font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2)}
-.ch p{margin:0;max-width:85%;padding:14px 16px;border-radius:18px;font:500 16px/1.35 var(--sans)}
-.ch .me{align-self:flex-end;background:#2B5278;color:#fff;border-bottom-right-radius:6px}
-.ch .cu{align-self:flex-start;background:#1E1E1E;color:var(--wh);border-bottom-left-radius:6px;display:grid;gap:6px}
-.ch .cu b{font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
-.ch .ty{align-self:flex-start;background:#1E1E1E;display:flex;gap:5px;padding:16px 18px}
-.ch .ty i{width:7px;height:7px;border-radius:50%;background:var(--mu)}
-@media (prefers-reduced-motion:no-preference){.ch .ty{animation:chy 9s infinite;animation-delay:var(--d)}.ch .cu{animation:chc 9s infinite;animation-delay:var(--d)}}
+:is(#how,#cases) .gq .gm{margin-top:56px;overflow:hidden}:is(#how,#cases) .gq .gm.two{margin-top:18px}
+:is(#how,#cases) .gq .gm .t{display:flex;align-items:center;gap:36px;width:max-content;animation:mq 46s linear infinite;font-size:clamp(48px,7vw,112px);line-height:1;text-transform:uppercase}
+:is(#how,#cases) .gq .gm.two .t{animation-direction:reverse;color:transparent;-webkit-text-stroke:1.5px rgba(242,240,235,.55)}
+:is(#how,#cases) .gq .gm em{font:700 13px/1 var(--sans);font-style:normal;letter-spacing:.16em;color:#050505;background:var(--or);padding:10px 14px;border-radius:999px;-webkit-text-stroke:0;white-space:nowrap}
+:is(#how,#cases) .gq .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:is(#how,#cases) /* requests variants */
+.rq1,:is(#how,#cases) .rq2,:is(#how,#cases) .rq3,:is(#how,#cases) .rq4{list-style:none;margin:64px 0 0;padding:0}
+:is(#how,#cases) .rq1{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+:is(#how,#cases) .ch{border:1px solid var(--ln);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:14px;background:#0B0B0B;min-height:250px}
+:is(#how,#cases) .ch .k{font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2)}
+:is(#how,#cases) .ch p{margin:0;max-width:85%;padding:14px 16px;border-radius:18px;font:500 16px/1.35 var(--sans)}
+:is(#how,#cases) .ch .me{align-self:flex-end;background:#2B5278;color:#fff;border-bottom-right-radius:6px}
+:is(#how,#cases) .ch .cu{align-self:flex-start;background:#1E1E1E;color:var(--wh);border-bottom-left-radius:6px;display:grid;gap:6px}
+:is(#how,#cases) .ch .cu b{font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
+:is(#how,#cases) .ch .ty{align-self:flex-start;background:#1E1E1E;display:flex;gap:5px;padding:16px 18px}
+:is(#how,#cases) .ch .ty i{width:7px;height:7px;border-radius:50%;background:var(--mu)}
+@media (prefers-reduced-motion:no-preference){:is(#how,#cases) .ch .ty{animation:chy 9s infinite;animation-delay:var(--d)}:is(#how,#cases) .ch .cu{animation:chc 9s infinite;animation-delay:var(--d)}}
 @keyframes chy{0%,100%{opacity:0;max-height:0;padding-block:0}5%,20%{opacity:1;max-height:40px;padding-block:16px}24%{opacity:0;max-height:0;padding-block:0}}
 @keyframes chc{0%,22%{opacity:.0}28%,92%{opacity:1}100%{opacity:0}}
-.rq2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.dz{position:relative;background:#F2F0EB;color:#050505;border-radius:6px;padding:26px 26px 22px;display:flex;flex-direction:column;gap:22px;min-height:260px;overflow:hidden}
-.dz .hd,.dz .ft{display:flex;justify-content:space-between;font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#6B6761}
-.dz .hd{border-bottom:1px dashed #B8B3AA;padding-bottom:14px}
-.dz .ft{margin-top:auto;border-top:1px dashed #B8B3AA;padding-top:14px}
-.dz b{font-size:clamp(22px,2.1vw,30px);line-height:1.05;text-transform:none;color:#050505}
-.dz .stp{position:absolute;right:18px;bottom:12px;transform:rotate(-12deg);border:3px solid var(--or);color:var(--or);border-radius:8px;padding:8px 14px;font:800 20px/1 var(--disp);font-stretch:125%;text-transform:uppercase;letter-spacing:.06em}
-@media (prefers-reduced-motion:no-preference){.dz .stp{animation:stp 5.6s ease-out infinite;animation-delay:var(--d)}}
+:is(#how,#cases) .rq2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+:is(#how,#cases) .dz{position:relative;background:#F2F0EB;color:#050505;border-radius:6px;padding:26px 26px 22px;display:flex;flex-direction:column;gap:22px;min-height:260px;overflow:hidden}
+:is(#how,#cases) .dz .hd,:is(#how,#cases) .dz .ft{display:flex;justify-content:space-between;font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#6B6761}
+:is(#how,#cases) .dz .hd{border-bottom:1px dashed #B8B3AA;padding-bottom:14px}
+:is(#how,#cases) .dz .ft{margin-top:auto;border-top:1px dashed #B8B3AA;padding-top:14px}
+:is(#how,#cases) .dz b{font-size:clamp(22px,2.1vw,30px);line-height:1.05;text-transform:none;color:#050505}
+:is(#how,#cases) .dz .stp{position:absolute;right:18px;bottom:12px;transform:rotate(-12deg);border:3px solid var(--or);color:var(--or);border-radius:8px;padding:8px 14px;font:800 20px/1 var(--disp);font-stretch:125%;text-transform:uppercase;letter-spacing:.06em}
+@media (prefers-reduced-motion:no-preference){:is(#how,#cases) .dz .stp{animation:stp 5.6s ease-out infinite;animation-delay:var(--d)}}
 @keyframes stp{0%{opacity:0;transform:rotate(-12deg) scale(1.6)}10%,85%{opacity:1;transform:rotate(-12deg) scale(1)}100%{opacity:0;transform:rotate(-12deg) scale(1)}}
-.rq3{display:grid;gap:0;border-top:1px solid var(--ln)}
-.pp{display:grid;grid-template-columns:minmax(0,1.5fr) 1fr auto 1fr minmax(0,1fr);align-items:center;gap:20px;padding:28px 0;border-bottom:1px solid var(--ln)}
-.pp .k{display:block;font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2);margin-bottom:10px}
-.pp .a b{font-size:clamp(22px,2.3vw,34px);line-height:1.05;text-transform:none}
-.pp .fl{position:relative;height:2px;background:var(--ln);overflow:hidden}
-.pp .fl i{position:absolute;top:0;bottom:0;width:30%;background:var(--or);animation:ppf 2.4s linear infinite;animation-delay:var(--d)}
+:is(#how,#cases) .rq3{display:grid;gap:0;border-top:1px solid var(--ln)}
+:is(#how,#cases) .pp{display:grid;grid-template-columns:minmax(0,1.5fr) 1fr auto 1fr minmax(0,1fr);align-items:center;gap:20px;padding:28px 0;border-bottom:1px solid var(--ln)}
+:is(#how,#cases) .pp .k{display:block;font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2);margin-bottom:10px}
+:is(#how,#cases) .pp .a b{font-size:clamp(22px,2.3vw,34px);line-height:1.05;text-transform:none}
+:is(#how,#cases) .pp .fl{position:relative;height:2px;background:var(--ln);overflow:hidden}
+:is(#how,#cases) .pp .fl i{position:absolute;top:0;bottom:0;width:30%;background:var(--or);animation:ppf 2.4s linear infinite;animation-delay:var(--d)}
 @keyframes ppf{from{left:-30%}to{left:100%}}
-.pp .node{font:800 14px/1 var(--disp);font-stretch:125%;text-transform:uppercase;color:#050505;background:var(--or);padding:12px 16px;border-radius:999px}
-.pp .z .k{color:var(--or)}
-.pp .z b{font:600 16px/1.35 var(--sans)}
-.rq4{display:grid;border-top:1px solid var(--ln)}
-.bt{display:grid;grid-template-columns:160px minmax(0,1fr) auto;align-items:center;gap:28px;padding:26px 0;border-bottom:1px solid var(--ln)}
-.bt .k{font:700 11px/1.6 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2)}
-.bt .k em{display:block;font-style:normal;color:var(--or)}
-.bt b{font-size:clamp(30px,4.4vw,68px);line-height:1;text-transform:uppercase;transition:color .4s}
-.bt .to{font:700 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--or);white-space:nowrap}
-@media (prefers-reduced-motion:no-preference){.bt b{animation:btc 7.5s ease-in-out infinite;animation-delay:var(--d)}}
+:is(#how,#cases) .pp .node{font:800 14px/1 var(--disp);font-stretch:125%;text-transform:uppercase;color:#050505;background:var(--or);padding:12px 16px;border-radius:999px}
+:is(#how,#cases) .pp .z .k{color:var(--or)}
+:is(#how,#cases) .pp .z b{font:600 16px/1.35 var(--sans)}
+:is(#how,#cases) .rq4{display:grid;border-top:1px solid var(--ln)}
+:is(#how,#cases) .bt{display:grid;grid-template-columns:160px minmax(0,1fr) auto;align-items:center;gap:28px;padding:26px 0;border-bottom:1px solid var(--ln)}
+:is(#how,#cases) .bt .k{font:700 11px/1.6 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2)}
+:is(#how,#cases) .bt .k em{display:block;font-style:normal;color:var(--or)}
+:is(#how,#cases) .bt b{font-size:clamp(30px,4.4vw,68px);line-height:1;text-transform:uppercase;transition:color .4s}
+:is(#how,#cases) .bt .to{font:700 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--or);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){:is(#how,#cases) .bt b{animation:btc 7.5s ease-in-out infinite;animation-delay:var(--d)}}
 @keyframes btc{0%,100%{color:var(--wh)}6%,26%{color:var(--or)}33%{color:var(--wh)}}
 .bcd2{gap:36px;padding-top:104px;padding-bottom:40px}.bcd2 .reel img{height:min(21vh,240px)}.bcd2 .act4{margin-top:0}
 @media(max-width:900px){.gtl{grid-template-columns:1fr 1fr}.gtl li{min-height:110px;padding:18px}.gs{grid-template-columns:1fr 1fr;row-gap:36px}.rq1,.rq2{grid-template-columns:1fr}.ch,.dz{min-height:0}.pp{grid-template-columns:1fr;gap:14px}.pp .fl,.pp .node{display:none}.bt{grid-template-columns:1fr;gap:10px}}
-.rq5,.rq6{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.qc{border:1px solid var(--ln);border-radius:20px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:22px;background:#0A0A0A}
-.qc .qm{font:800 88px/.6 var(--disp);color:var(--or);height:44px}
-.qc p{margin:0;font:500 20px/1.4 var(--sans);color:var(--wh);flex:1}
-.qc .who{display:grid;gap:6px}.qc .who b{font:700 15px/1.2 var(--sans)}.qc .who span{font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2)}
-.qc .ctx{border-top:1px solid var(--ln);padding-top:16px;display:grid;gap:6px;font:600 15px/1.3 var(--sans)}
-.qc .ctx span,.qc .ctx em{font:700 11px/1 var(--sans);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--mu)}
-.qc .ctx em{color:var(--or)}
-.fw{display:flex;flex-direction:column;gap:16px}
-.fw .bb{position:relative;background:#182533;border-radius:18px 18px 18px 6px;padding:16px 18px 26px;display:grid;gap:10px}
-.fw .fh{font:600 13px/1 var(--sans);color:#6AB3F3;border-left:2px solid #6AB3F3;padding-left:10px}
-.fw p{margin:0;font:400 17px/1.45 var(--sans);color:#fff}
-.fw .tm{position:absolute;right:14px;bottom:8px;font:400 12px/1 var(--sans);color:#7D8E9F}
-.fw .who{display:grid;gap:6px;padding-left:4px}.fw .who b{font:700 15px/1.2 var(--sans)}.fw .who span{font:700 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
-.rq7{margin-top:64px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
-.rq7 .tabs{display:grid;gap:0;border-top:1px solid var(--ln)}
-.rq7 .tabs span{padding:18px 0;border-bottom:1px solid var(--ln);font:800 18px/1 var(--disp);font-stretch:115%;text-transform:uppercase;color:var(--mu)}
-.rq7 .stk{display:grid}
-.bq{grid-area:1/1;margin:0;opacity:0}
-.bq blockquote{margin:0;font-size:clamp(30px,3.6vw,56px);line-height:1.05;text-transform:none;letter-spacing:-.01em}
-.bq figcaption{margin-top:32px;display:grid;gap:8px}.bq figcaption b{font:700 16px/1.2 var(--sans)}.bq figcaption span{font:700 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--or)}
-@media (prefers-reduced-motion:no-preference){.bq{animation:bqf 18s infinite;animation-delay:var(--d)}.rq7 .tabs span{animation:bqt 18s infinite;animation-delay:var(--d)}}
-@media (prefers-reduced-motion:reduce){.bq:first-child{opacity:1}}
+#cases .rq5,#cases .rq6{list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+#cases .qc{border:1px solid var(--ln);border-radius:20px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:22px;background:#0A0A0A}
+#cases .qc .qm{font:800 88px/.6 var(--disp);color:var(--or);height:44px}
+#cases .qc p{margin:0;font:500 20px/1.4 var(--sans);color:var(--wh);flex:1}
+#cases .qc .who{display:grid;gap:6px}#cases .qc .who b{font:700 15px/1.2 var(--sans)}#cases .qc .who span{font:700 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mu2)}
+#cases .qc .ctx{border-top:1px solid var(--ln);padding-top:16px;display:grid;gap:6px;font:600 15px/1.3 var(--sans)}
+#cases .qc .ctx span,#cases .qc .ctx em{font:700 11px/1 var(--sans);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--mu)}
+#cases .qc .ctx em{color:var(--or)}
+#cases .tgq{display:flex;flex-direction:column;gap:16px}
+#cases .tgq .bb{position:relative;background:#182533;border-radius:18px 18px 18px 6px;padding:16px 18px 26px;display:grid;gap:10px}
+#cases .tgq .fh{font:600 13px/1 var(--sans);color:#6AB3F3;border-left:2px solid #6AB3F3;padding-left:10px}
+#cases .tgq p{margin:0;font:400 17px/1.45 var(--sans);color:#fff}
+#cases .tgq .tm{position:absolute;right:14px;bottom:8px;font:400 12px/1 var(--sans);color:#7D8E9F}
+#cases .tgq .who{display:grid;gap:6px;padding-left:4px}#cases .tgq .who b{font:700 15px/1.2 var(--sans)}#cases .tgq .who span{font:700 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
+#cases .rq7{margin-top:64px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
+#cases .rq7 .tabs{display:grid;gap:0;border-top:1px solid var(--ln)}
+#cases .rq7 .tabs span{padding:18px 0;border-bottom:1px solid var(--ln);font:800 18px/1 var(--disp);font-stretch:115%;text-transform:uppercase;color:var(--mu)}
+#cases .rq7 .stk{display:grid}
+#cases .bq{grid-area:1/1;margin:0;opacity:0}
+#cases .bq blockquote{margin:0;font-size:clamp(30px,3.6vw,56px);line-height:1.05;text-transform:none;letter-spacing:-.01em}
+#cases .bq figcaption{margin-top:32px;display:grid;gap:8px}#cases .bq figcaption b{font:700 16px/1.2 var(--sans)}#cases .bq figcaption span{font:700 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--or)}
+@media (prefers-reduced-motion:no-preference){#cases .bq{animation:bqf 18s infinite;animation-delay:var(--d)}#cases .rq7 .tabs span{animation:bqt 18s infinite;animation-delay:var(--d)}}
+@media (prefers-reduced-motion:reduce){#cases .bq:first-child{opacity:1}}
 @keyframes bqf{0%{opacity:0;transform:translateY(12px)}3%,30%{opacity:1;transform:none}33%,100%{opacity:0}}
 @keyframes bqt{0%,33%,100%{color:var(--mu)}1%,31%{color:var(--or)}}
-@media(max-width:900px){.rq5,.rq6{grid-template-columns:1fr;gap:16px;margin-top:40px}.rq7{grid-template-columns:1fr;gap:24px}.rq7 .tabs{display:flex;gap:18px;border:0}.rq7 .tabs span{border:0;padding:0;font-size:14px}}
+@media(max-width:900px){#cases .rq5,#cases .rq6{grid-template-columns:1fr;gap:16px;margin-top:40px}#cases .rq7{grid-template-columns:1fr;gap:24px}#cases .rq7 .tabs{display:flex;gap:18px;border:0}#cases .rq7 .tabs span{border:0;padding:0;font-size:14px}}
+#how .opw:has(h2){grid-template-columns:minmax(0,1.2fr) minmax(0,540px);gap:40px}
+#how .opw h2{font-size:clamp(40px,4.9vw,92px)}
+.bcd3{gap:44px;padding:104px 0 48px}
+.bcd3 .sh h2{font-size:clamp(40px,4.6vw,96px)}@media(min-width:901px){.bcd3 .sh h2{white-space:nowrap}}
+.bcd3 .reel img{height:min(33vh,360px)}
+.plate27{padding-block:56px 72px}.plate27 .act4{margin-top:0}
+@media(max-width:900px){.bcd3 .reel img{height:min(28vh,230px)}.plate27{padding-block:24px 56px}}
 /* ===== mobile revision: headings ===== */
 @media(max-width:600px){
  .D{font-stretch:106%;letter-spacing:-.005em;line-height:.92;text-wrap:balance}
@@ -1435,12 +1442,12 @@ a.tv:hover .st{color:#050505}
   <p class="lead rv">Owners and C‑LVL of iGaming, Forex and Adult operators. No random people.</p></div>
   <div class="nums"><div class="row rv"><b>500+</b><span>Key industry leaders</span></div><div class="row rv"><b>65%</b><span>B2C operators</span></div><div class="row rv"><b>C‑LVL</b><span>CEO · COO · CMO · CPO · CFO</span></div></div>
 </section>
-<section class="sec wrap" id="how"><div class="opw"><div class="sh"><h2 class="D rv"><span style="white-space:nowrap">Partners for</span><br><span class="or">growth.</span></h2></div><div class="dgf rv"><svg class="dg" viewBox="0 0 760 660" role="img" aria-label="Your project in the centre; vetted Curia partners around it for every request, each with a member offer"><circle cx="380" cy="320" r="210" class="ring"/><circle cx="380" cy="320" r="210" class="ring2"/><circle cx="380" cy="110" r="9" class="dot sq" style="animation-delay:0.0s"/><text x="380" y="80" class="cl2 sq" text-anchor="middle" style="animation-delay:0.0s">Licence</text><text x="380" y="54" class="tg" text-anchor="middle" style="animation-delay:0.0s">Member offer</text><circle cx="528" cy="172" r="9" class="dot sq" style="animation-delay:1.2s"/><text x="544" y="162" class="cl2 sq" text-anchor="start" style="animation-delay:1.2s">Platform</text><text x="544" y="184" class="tg" text-anchor="start" style="animation-delay:1.2s">Member offer</text><circle cx="590" cy="320" r="9" class="dot sq" style="animation-delay:2.4s"/><text x="612" y="326" class="cl2 sq" text-anchor="start" style="animation-delay:2.4s">Payments</text><text x="612" y="348" class="tg" text-anchor="start" style="animation-delay:2.4s">Member offer</text><circle cx="528" cy="468" r="9" class="dot sq" style="animation-delay:3.6s"/><text x="544" y="490" class="cl2 sq" text-anchor="start" style="animation-delay:3.6s">Games</text><text x="544" y="512" class="tg" text-anchor="start" style="animation-delay:3.6s">Member offer</text><circle cx="380" cy="530" r="9" class="dot sq" style="animation-delay:4.8s"/><text x="380" y="574" class="cl2 sq" text-anchor="middle" style="animation-delay:4.8s">Traffic</text><text x="380" y="596" class="tg" text-anchor="middle" style="animation-delay:4.8s">Member offer</text><circle cx="232" cy="468" r="9" class="dot sq" style="animation-delay:6.0s"/><text x="216" y="490" class="cl2 sq" text-anchor="end" style="animation-delay:6.0s">CRM</text><text x="216" y="512" class="tg" text-anchor="end" style="animation-delay:6.0s">Member offer</text><circle cx="170" cy="320" r="9" class="dot sq" style="animation-delay:7.2s"/><text x="148" y="326" class="cl2 sq" text-anchor="end" style="animation-delay:7.2s">Analytics</text><text x="148" y="348" class="tg" text-anchor="end" style="animation-delay:7.2s">Member offer</text><circle cx="232" cy="172" r="9" class="dot sq" style="animation-delay:8.4s"/><text x="216" y="162" class="cl2 sq" text-anchor="end" style="animation-delay:8.4s">Legal</text><text x="216" y="184" class="tg" text-anchor="end" style="animation-delay:8.4s">Member offer</text><circle cx="380" cy="320" r="120" class="nd2 on"/><text x="380" y="308" class="nt on" text-anchor="middle">YOUR</text><text x="380" y="346" class="nt on" text-anchor="middle">PROJECT</text></svg></div></div></section>
+<section class="sec wrap" id="how"><div class="opw"><div class="sh"><h2 class="D rv">Partners for<br><span class="or">growth.</span></h2></div><div class="dgf rv"><svg class="dg" viewBox="0 0 760 660" role="img" aria-label="Your project in the centre; vetted Curia partners around it for every request, each with a member offer"><circle cx="380" cy="320" r="210" class="ring"/><circle cx="380" cy="320" r="210" class="ring2"/><circle cx="380" cy="110" r="9" class="dot sq" style="animation-delay:0.0s"/><text x="380" y="80" class="cl2 sq" text-anchor="middle" style="animation-delay:0.0s">Licence</text><text x="380" y="54" class="tg" text-anchor="middle" style="animation-delay:0.0s">Member offer</text><circle cx="528" cy="172" r="9" class="dot sq" style="animation-delay:1.2s"/><text x="544" y="162" class="cl2 sq" text-anchor="start" style="animation-delay:1.2s">Platform</text><text x="544" y="184" class="tg" text-anchor="start" style="animation-delay:1.2s">Member offer</text><circle cx="590" cy="320" r="9" class="dot sq" style="animation-delay:2.4s"/><text x="612" y="326" class="cl2 sq" text-anchor="start" style="animation-delay:2.4s">Payments</text><text x="612" y="348" class="tg" text-anchor="start" style="animation-delay:2.4s">Member offer</text><circle cx="528" cy="468" r="9" class="dot sq" style="animation-delay:3.6s"/><text x="544" y="490" class="cl2 sq" text-anchor="start" style="animation-delay:3.6s">Games</text><text x="544" y="512" class="tg" text-anchor="start" style="animation-delay:3.6s">Member offer</text><circle cx="380" cy="530" r="9" class="dot sq" style="animation-delay:4.8s"/><text x="380" y="574" class="cl2 sq" text-anchor="middle" style="animation-delay:4.8s">Traffic</text><text x="380" y="596" class="tg" text-anchor="middle" style="animation-delay:4.8s">Member offer</text><circle cx="232" cy="468" r="9" class="dot sq" style="animation-delay:6.0s"/><text x="216" y="490" class="cl2 sq" text-anchor="end" style="animation-delay:6.0s">CRM</text><text x="216" y="512" class="tg" text-anchor="end" style="animation-delay:6.0s">Member offer</text><circle cx="170" cy="320" r="9" class="dot sq" style="animation-delay:7.2s"/><text x="148" y="326" class="cl2 sq" text-anchor="end" style="animation-delay:7.2s">Analytics</text><text x="148" y="348" class="tg" text-anchor="end" style="animation-delay:7.2s">Member offer</text><circle cx="232" cy="172" r="9" class="dot sq" style="animation-delay:8.4s"/><text x="216" y="162" class="cl2 sq" text-anchor="end" style="animation-delay:8.4s">Legal</text><text x="216" y="184" class="tg" text-anchor="end" style="animation-delay:8.4s">Member offer</text><circle cx="380" cy="320" r="120" class="nd2 on"/><text x="380" y="308" class="nt on" text-anchor="middle">YOUR</text><text x="380" y="346" class="nt on" text-anchor="middle">PROJECT</text></svg></div></div></section>
 <section class="sec wrap" id="who"><div class="sh"><h2 class="D rv">How it<br><span class="or">works.</span></h2></div><div class="flowc fl wa2 rv"><div class="nd g"><span class="tag tp">You</span><b class="D ttl">Your project</b><span class="pc">Any stage</span></div><div class="ar2"><span>Request</span><svg viewBox="0 0 60 12" aria-hidden="true"><path d="M0 6h56M50 1l6 5-6 5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg><span class="bk"><svg viewBox="0 0 60 12" aria-hidden="true"><path d="M0 6h56M50 1l6 5-6 5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></span><span>Member terms</span></div><div class="nd g on cm"><span class="tag">Business club</span><b class="D cmt">Curia</b></div><div class="ar2"><span>Warm intro</span><svg viewBox="0 0 60 12" aria-hidden="true"><path d="M0 6h56M50 1l6 5-6 5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg><span class="bk"><svg viewBox="0 0 60 12" aria-hidden="true"><path d="M0 6h56M50 1l6 5-6 5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></span><span>Member offer</span></div><div class="nd g"><span class="tag tp">The partners</span><b class="D ttl">Curia Circle</b><span class="pc">Vetted · member terms</span></div></div></section>
 <section class="sec wrap" id="cases"><div class="sh"><h2 class="D rv">In members’<br><span class="or">words.</span></h2></div><div class="rq7 rv"><div class="tabs"><span style="--d:0s">Payments</span><span style="--d:6s">Traffic</span><span style="--d:12s">Analytics</span></div><div class="stk"><figure class="bq" style="--d:0s"><blockquote class="D">“[Member quote — one or two sentences about this intro]”</blockquote><figcaption><b>[Role] · [Market]</b><span>Payments · Pre‑launch · Request: PSP for Brazil</span></figcaption></figure><figure class="bq" style="--d:6s"><blockquote class="D">“[Member quote — one or two sentences about this intro]”</blockquote><figcaption><b>[Role] · [Market]</b><span>Traffic · First year · Request: Traffic for a LatAm launch</span></figcaption></figure><figure class="bq" style="--d:12s"><blockquote class="D">“[Member quote — one or two sentences about this intro]”</blockquote><figcaption><b>[Role] · [Market]</b><span>Analytics · Second year · Request: Analytics stack for scale</span></figcaption></figure></div></div></section>
-<section class="bcd bcd2" id="evenings"><div class="wrap"><div class="sh"><h2 class="D rv">Behind<br><span class="or">closed doors.</span></h2></div></div>
-<div class="reel"><div class="rt" data-dup><picture><source srcset="img/r_terrace.webp" type="image/webp"><img src="img/r_terrace.jpg" alt="Curia evening on a rooftop above Rome at night" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_deck.webp" type="image/webp"><img src="img/l_deck.jpg" alt="Three guests talking on the deck of the Curia yacht, Lisbon" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_pair.webp" type="image/webp"><img src="img/r_pair.jpg" alt="Two guests on the rooftop terrace in Rome" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_bridge.webp" type="image/webp"><img src="img/l_bridge.jpg" alt="Lisbon bridge seen from the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_talk5.webp" type="image/webp"><img src="img/r_talk5.jpg" alt="Guests in conversation on the rooftop in Rome" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_trio.webp" type="image/webp"><img src="img/l_trio.jpg" alt="Three guests talking on the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_cigar.webp" type="image/webp"><img src="img/r_cigar.jpg" alt="Guest lighting a cigar at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_oysters.webp" type="image/webp"><img src="img/l_oysters.jpg" alt="Oysters served on the Curia yacht" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_dome.webp" type="image/webp"><img src="img/r_dome.jpg" alt="Guests on a Rome rooftop with a basilica dome behind" width="547" height="820" loading="lazy" decoding="async"></picture></div><div class="rt two" data-dup><picture><source srcset="img/r_dj.webp" type="image/webp"><img src="img/r_dj.jpg" alt="Live DJ set at a Curia evening" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_talk.webp" type="image/webp"><img src="img/l_talk.jpg" alt="Two members in conversation in Lisbon" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_cube2.webp" type="image/webp"><img src="img/r_cube2.jpg" alt="The glowing Curia light cube" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_sofa.webp" type="image/webp"><img src="img/l_sofa.jpg" alt="Two guests talking in the yacht lounge, Lisbon" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_talk3.webp" type="image/webp"><img src="img/r_talk3.jpg" alt="Members in conversation at a Curia evening" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_fun.webp" type="image/webp"><img src="img/l_fun.jpg" alt="Guests laughing on the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_bar.webp" type="image/webp"><img src="img/r_bar.jpg" alt="Bartender pouring a drink at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_sun.webp" type="image/webp"><img src="img/l_sun.jpg" alt="Guest on deck of the Curia yacht in the sun" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_crowd.webp" type="image/webp"><img src="img/r_crowd.jpg" alt="Guests on the terrace at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture></div></div>
-<div class="wrap"><div class="act4 rv" id="dates"><div><span>2027 schedule</span><b>Coming soon.</b></div><div class="r"><p>Members are invited first.</p><a class="lnk" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Apply in Telegram<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4.2 3H9v4.8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></div></section>
+<section class="bcd bcd3" id="evenings"><div class="wrap"><div class="sh"><h2 class="D rv">Behind <span class="or">closed doors.</span></h2></div></div>
+<div class="reel"><div class="rt" data-dup><picture><source srcset="img/r_terrace.webp" type="image/webp"><img src="img/r_terrace.jpg" alt="Curia evening on a rooftop above Rome at night" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_deck.webp" type="image/webp"><img src="img/l_deck.jpg" alt="Three guests talking on the deck of the Curia yacht, Lisbon" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_pair.webp" type="image/webp"><img src="img/r_pair.jpg" alt="Two guests on the rooftop terrace in Rome" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_bridge.webp" type="image/webp"><img src="img/l_bridge.jpg" alt="Lisbon bridge seen from the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_talk5.webp" type="image/webp"><img src="img/r_talk5.jpg" alt="Guests in conversation on the rooftop in Rome" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_trio.webp" type="image/webp"><img src="img/l_trio.jpg" alt="Three guests talking on the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_cigar.webp" type="image/webp"><img src="img/r_cigar.jpg" alt="Guest lighting a cigar at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_oysters.webp" type="image/webp"><img src="img/l_oysters.jpg" alt="Oysters served on the Curia yacht" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_dome.webp" type="image/webp"><img src="img/r_dome.jpg" alt="Guests on a Rome rooftop with a basilica dome behind" width="547" height="820" loading="lazy" decoding="async"></picture></div><div class="rt two" data-dup><picture><source srcset="img/r_dj.webp" type="image/webp"><img src="img/r_dj.jpg" alt="Live DJ set at a Curia evening" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_talk.webp" type="image/webp"><img src="img/l_talk.jpg" alt="Two members in conversation in Lisbon" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_cube2.webp" type="image/webp"><img src="img/r_cube2.jpg" alt="The glowing Curia light cube" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_sofa.webp" type="image/webp"><img src="img/l_sofa.jpg" alt="Two guests talking in the yacht lounge, Lisbon" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_talk3.webp" type="image/webp"><img src="img/r_talk3.jpg" alt="Members in conversation at a Curia evening" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_fun.webp" type="image/webp"><img src="img/l_fun.jpg" alt="Guests laughing on the Curia yacht" width="820" height="547" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_bar.webp" type="image/webp"><img src="img/r_bar.jpg" alt="Bartender pouring a drink at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/l_sun.webp" type="image/webp"><img src="img/l_sun.jpg" alt="Guest on deck of the Curia yacht in the sun" width="547" height="820" loading="lazy" decoding="async"></picture><picture><source srcset="img/r_crowd.webp" type="image/webp"><img src="img/r_crowd.jpg" alt="Guests on the terrace at a Curia evening" width="547" height="820" loading="lazy" decoding="async"></picture></div></div></section>
+<section class="wrap plate27"><div class="act4 rv" id="dates"><div><span>2027 schedule</span><b>Coming soon.</b></div><div class="r"><p>Members are invited first.</p><a class="lnk" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Apply in Telegram<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4.2 3H9v4.8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></section>
 <section class="join wrap" id="join">
   <span class="tag or">Business club for operators</span>
   <h2 class="D rv" style="margin-top:22px">Join Curia<span class="or">.</span></h2>
