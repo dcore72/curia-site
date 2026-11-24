@@ -2009,9 +2009,6 @@ body.hm3 .hero-p.hd .jc .bb:not(.id){display:none}
 }
 /* ===== o31: mobile step 2 ===== */
 @media(max-width:600px){
-body.m31 .stk-cta{display:none!important}
-body.m31 .hb .cta{display:inline-flex}
-body.m31 footer{padding-bottom:0}
 /* club: numbers in a grid */
 body.m31 .nums{grid-template-columns:1fr 1fr;gap:0 20px;margin-top:36px}
 body.m31 .nums .row{padding:20px 0;gap:6px}
@@ -2093,6 +2090,10 @@ body.vf1 .vtt1 .vf li:nth-child(4){width:62%}body.vf1 .vtt1 .vf .top em{display:
 body.vf2 .vtt1 .vf li.top{background:var(--or)}body.vf2 .vtt1 .vf .top strong{color:#0A0A0A}
 body.of2 #how.ox .oc.mr{background:var(--or)}
 }
+/* marquee: keep the moving strip on its own GPU layer so iOS Safari does not drop it while scrolling */
+.mq{contain:paint;isolation:isolate}
+.mq .t{will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+@media(max-width:600px){.mq .t{gap:28px;padding:16px 0}.mq .t span{font-size:24px}.mq .t b{font-size:16px}}
 </style>
 </head>
 <body id="top" class="m30 hm1 m31 vf3 of3">
@@ -2121,6 +2122,7 @@ body.of2 #how.ox .oc.mr{background:var(--or)}
   <p class="rv">Two minutes in Telegram. Every application reviewed personally.</p>
   <a class="cta rv" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Apply in Telegram<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4.2 3H9v4.8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </section>
+<a class="stk-cta" id="stk" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Apply in Telegram<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4.2 3H9v4.8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a><script>document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("stk");if(!b||!("IntersectionObserver" in window))return;var h=document.querySelector(".hero"),j=document.getElementById("join"),hv=true,jv=false;function u(){b.classList.toggle("on",!hv&&!jv)}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.target===h)hv=e.isIntersecting;else jv=e.isIntersecting});u()},{threshold:0});if(h)io.observe(h);if(j)io.observe(j)});</script>
 </main>
 <footer class="wrap ft ftb fth">
 <div class="frow">
