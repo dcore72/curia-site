@@ -2094,6 +2094,13 @@ body.of2 #how.ox .oc.mr{background:var(--or)}
 .mq{contain:paint;isolation:isolate}
 .mq .t{will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 @media(max-width:600px){.mq .t{gap:28px;padding:16px 0}.mq .t span{font-size:24px}.mq .t b{font-size:16px}}
+/* iOS 26 Safari tints its toolbar with the background of a fixed element at the bottom:
+   the fixed element is now a 1px strip in the page colour, the orange button hangs above it */
+.stk-w{display:none}
+@media(max-width:600px){
+body.m30 .stk-w{display:block;position:fixed;left:0;right:0;bottom:0;height:1px;background:#050505;z-index:40;pointer-events:none}
+body.m30 .stk-w .stk-cta{position:absolute;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));pointer-events:auto}
+}
 </style>
 </head>
 <body id="top" class="m30 hm1 m31 vf3 of3">
