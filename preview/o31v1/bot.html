@@ -2098,8 +2098,9 @@ body.of2 #how.ox .oc.mr{background:var(--or)}
    the fixed element is now a 1px strip in the page colour, the orange button hangs above it */
 .stk-w{display:none}
 @media(max-width:600px){
-body.m30 .stk-w{display:block;position:fixed;left:0;right:0;bottom:0;height:1px;background:#050505;z-index:40;pointer-events:none}
-body.m30 .stk-w .stk-cta{position:absolute;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));pointer-events:auto}
+body.m30 .stk-w{display:block;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#050505;border-top:1px solid var(--ln);padding:12px 12px calc(12px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+body.m30 .stk-w.on{transform:none}
+body.m30 .stk-w .stk-cta{position:static;display:flex;transform:none;box-shadow:none}
 }
 </style>
 </head>
