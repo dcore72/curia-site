@@ -1284,7 +1284,7 @@ body{overflow-x:clip}
 #how.oxc .oc{background:linear-gradient(160deg,#1A0B05,#0A0A0A 58%);border-color:rgba(255,90,31,.35)}
 #how.oxc .oc::before{display:none}
 #how.oxc .oc.mr{background:var(--or);border-color:var(--or);color:#0A0A0A;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-#how.oxc .oc.mr:hover{transform:translateY(-4px)}
+@media(hover:hover){#how.oxc .oc.mr:hover{transform:translateY(-4px)}}
 #how.oxc .oc.mr .m b,#how.oxc .oc.mr .v,#how.oxc .oc.mr .v i,#how.oxc .oc.mr .ds b{color:#0A0A0A}
 #how.oxc .oc.mr .m i,#how.oxc .oc.mr .ds i,#how.oxc .oc.mr .f{color:rgba(10,10,10,.68)}
 #how.oxc .oc.mr .f{border-color:rgba(10,10,10,.2)}#how.oxc .oc.mr .f i{background:#0A0A0A}
@@ -2515,6 +2515,13 @@ body.cdn .cp5-dn{display:grid;margin-top:64px}
 body.cdn .cp5 .sh h2{max-width:none;font-size:clamp(44px,6.8vw,104px)}
 body.cdn .cp5-dn{border-top:1px solid #2a2a2a;column-gap:28px}
 body.cdn .cp5-dn .row{border-top:0;padding-top:32px;gap:16px}
+}
+/* o52: mobile offers swipe — steady cards */
+@media(max-width:600px){
+body.of1 #how.ox .ocs{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y;scroll-snap-type:x mandatory}
+body.of1 #how.ox .ocs>li{scroll-snap-stop:always}
+html.js body.of1 #how.ox .ocs .rv,html.js body.of1 #how.ox .ocs>li{opacity:1!important;transform:none!important;transition:none!important}
+body.of1 #how.ox .oc.mr{transition:none}
 }
 </style>
 </head>
