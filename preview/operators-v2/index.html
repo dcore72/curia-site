@@ -2458,9 +2458,67 @@ body.cj2d .e26chip b{color:var(--or);font-weight:700}
 body.cj2d .e26chip i{width:8px;height:8px;border-radius:50%;background:var(--or)}
 body.cj2d .e26c .e26o .sh{text-align:center}
 body.cj2d .e26{padding-bottom:0}
+/* ===== o48: club block on desktop ===== */
+.cp5 br.cbr{display:none}
+@media(min-width:901px){
+/* DA: headline on top in two lines, wide card with three columns */
+body.cda .cp5-g{display:block}
+body.cda .cp5 .sh h2{max-width:none}
+body.cda .cp5-card{margin-top:56px}
+body.cda .cp5-card dl{grid-template-columns:repeat(3,minmax(0,1fr))}
+body.cda .cp5-card dl>div{display:flex!important;flex-direction:column;align-items:flex-start!important;gap:14px;padding:30px 0 30px 32px!important;border-bottom:0;border-left:1px solid rgba(242,240,235,.1)}
+body.cda .cp5-card dl>div:first-child{padding-left:0!important;border-left:0}
+body.cda .cp5-card dd{font-size:clamp(64px,6.4vw,104px)!important}
+body.cda .cp5-card dl{border-bottom:1px solid rgba(242,240,235,.1)}
+/* DB: side by side, headline set in four even lines */
+body.cdb .cp5 br.cbr{display:inline}
+body.cdb .cp5-g{grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:72px}
+body.cdb .cp5 .sh h2{max-width:none;font-size:clamp(56px,6.2vw,104px);line-height:.92}
+/* DC: headline on top, card as a wide table */
+body.cdc .cp5-g{display:block}
+body.cdc .cp5 .sh h2{max-width:none}
+body.cdc .cp5-card{margin-top:56px;padding:34px 44px}
+body.cdc .cp5-card dl>div{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;padding:26px 0!important}
+body.cdc .cp5-card dd{font-size:clamp(64px,6vw,100px)!important}
+body.cdc .cp5-card dl>div>span{font-size:20px!important}
+body.cdc .cp5-card dl>div>span em{display:inline!important}body.cdc .cp5-card dl>div>span i{display:inline!important}
+}
+/* ===== o49: DA refined ===== */
+.cp5-roles{display:none}
+@media(min-width:901px){
+body.cda .cp5-card{padding:34px 40px}
+body.cda .cp5-card dl>div{align-items:center!important;text-align:center;padding:40px 24px!important;gap:16px}
+body.cda .cp5-card dl>div:first-child{padding-left:24px!important}
+body.cda .cp5-card dt{display:none}
+body.cda .cp5-card dd{font-size:clamp(64px,5.8vw,88px)!important;font-stretch:112%;line-height:.85;white-space:nowrap}
+/* A: label above, one line, small caps */
+body.cda1 .cp5-card dl>div>span{order:-1;margin:0!important;white-space:nowrap!important;font:700 12px/1 var(--sans)!important;letter-spacing:.18em;text-transform:uppercase;color:var(--mu2)!important}
+body.cda1 .cp5-card dl>div>span em{display:inline!important}body.cda1 .cp5-card dl>div>span i{display:inline!important}
+/* B: numbers only, roles move to the card footer */
+body.cda2 .cp5-card dl>div>span{display:none!important}
+body.cda2 .cp5-roles{display:inline;margin-left:auto;margin-right:24px}
+body.cda2 .cp5-card dl>div{padding:48px 24px!important}
+/* C: label below, one line, centred */
+body.cda3 .cp5-card dl>div>span{margin:0!important;white-space:nowrap!important;font:500 17px/1.3 var(--sans)!important;color:var(--wh)!important}
+body.cda3 .cp5-card dl>div>span em{display:inline!important}body.cda3 .cp5-card dl>div>span i{display:inline!important}
+}
+/* ===== o50: desktop keeps the approved numbers row, card only on mobile ===== */
+.cp5-dn{display:none}
+@media(min-width:901px){
+body.cdn .cp5-card{display:none}
+body.cdn .cp5-g{display:block}
+body.cdn .cp5 .sh h2{max-width:16ch}
+body.cdn .cp5-dn{display:grid;margin-top:64px}
+}
+/* o51: final tidy of the desktop club block */
+@media(min-width:901px){
+body.cdn .cp5 .sh h2{max-width:none;font-size:clamp(44px,6.8vw,104px)}
+body.cdn .cp5-dn{border-top:1px solid #2a2a2a;column-gap:28px}
+body.cdn .cp5-dn .row{border-top:0;padding-top:32px;gap:16px}
+}
 </style>
 </head>
-<body id="top" class="m30 hm1 m31 of1 vg1 cj2 cj2d cpa jmin jq3">
+<body id="top" class="m30 hm1 m31 of1 vg1 cj2 cj2d cpa jmin jq3 cdn">
 <header id="hdr" class="hn1"><div class="wrap hb hbn">
 <div class="lft"><a class="lg" href="index.html" aria-label="Curia"><svg width="40" height="26" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg><b>CURIA</b></a><i class="sep"></i><div class="aud" role="navigation" aria-label="Audience"><a href="index.html" class="on">Operators</a><a href="partners.html">Partners</a></div></div>
 <nav><a href="#club">Club</a><a href="#works">How it works</a><a href="#how">Offers</a><a href="#vetted">Who gets in</a><a href="#evenings">Evenings</a></nav>
@@ -2471,7 +2529,7 @@ body.cj2d .e26{padding-bottom:0}
 <main>
 <section class="hero hero-p hd hd1"><div class="in"><div class="hl"><h1 class="D"><span><em>People open doors</em></span><span><em class="or">money can’t.</em></span></h1></div><aside class="jc je2" aria-label="Apply to Curia in Telegram"><div class="ch"><span class="av"><svg width="20" height="13" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg><span class="dot"></span></span><span><b>Curia</b><i>private business club</i></span></div><div class="bbs"><div class="bb">Welcome to Curia.</div><div class="bb id">500+ owners and C‑LVL of iGaming, Forex &amp; Adult operators are a few questions away.</div><div class="bb">Join our community of industry leaders!</div><a class="kb" href="https://t.me/CuriaCBot" target="_blank" rel="noopener">Apply in Telegram<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9L9 3M4.2 3H9v4.8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><span class="note">Free for operators</span></aside></div></section>
 <div class="mq" aria-hidden="true"><div class="t D" data-dup><span>Business club</span><b>✦</b><span>iGaming</span><b>✦</b><span>Forex</span><b>✦</b><span>Adult</span><b>✦</b><span>Owners</span><b>✦</b><span>C‑LVL</span><b>✦</b><span>Deals</span><b>✦</b><span>Member terms</span><b>✦</b></div></div>
-<section class="sec wrap cp cp5" id="club"><div class="cp5-g"><div class="sh"><h2 class="D rv">A business club.<br><span class="or">Not a chat.</span></h2></div><div class="cp5-card rv"><div class="cp5-top"><span class="cp5-lg"><svg width="40" height="26" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg><b>CURIA</b></span><em>Business club</em></div><dl><div><dt>Members</dt><dd class="D">500+</dd><span><em>Key industry</em><i> </i><em>leaders</em></span></div><div><dt><b class="o1">Operators</b><b class="o2">B2C operators</b></dt><dd class="D">65%</dd><span><em>B2C</em><i> </i><em>operators</em></span></div><div><dt>Level</dt><dd class="D">C‑LVL</dd><span><em>CEO · COO</em><i> · </i><em>CMO · CPO</em></span></div></dl><div class="cp5-ft"><span>iGaming · Forex · Adult</span><span class="cp5-chip"></span></div></div></div></section>
+<section class="sec wrap cp cp5" id="club"><div class="cp5-g"><div class="sh"><h2 class="D rv">A business<br class="cbr"> club.<br><span class="or">Not a<br class="cbr"> chat.</span></h2></div><div class="cp5-card rv"><div class="cp5-top"><span class="cp5-lg"><svg width="40" height="26" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg><b>CURIA</b></span><em>Business club</em></div><dl><div><dt>Members</dt><dd class="D">500+</dd><span><em>Key industry</em><i> </i><em>leaders</em></span></div><div><dt><b class="o1">Operators</b><b class="o2">B2C operators</b></dt><dd class="D">65%</dd><span><em>B2C</em><i> </i><em>operators</em></span></div><div><dt>Level</dt><dd class="D">C‑LVL</dd><span><em>CEO · COO</em><i> · </i><em>CMO · CPO</em></span></div></dl><div class="cp5-ft"><span>iGaming · Forex · Adult</span><span class="cp5-roles">CEO · COO · CMO · CPO</span><span class="cp5-chip"></span></div></div></div><div class="nums cp5-dn"><div class="row rv"><b>500+</b><span>Key industry leaders</span></div><div class="row rv"><b>65%</b><span>B2C operators</span></div><div class="row rv"><b>C‑LVL</b><span>CEO · COO · CMO · CPO</span></div></div></section>
 <section class="sec wrap hw hwb" id="works"><div class="hw-g"><div class="sh"><h2 class="D rv">You ask.<br><span class="or">We match.</span></h2><p class="lead rv">Community tested. Niche experts. Members terms.</p><ol class="hw-k rv"><li><em>01</em>Ask</li><li><em>02</em>Match</li><li><em>03</em>Terms</li></ol></div><div class="hw-t rv"><div class="hw-th"><span class="av"><svg width="20" height="13" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg></span><span><b>Curia</b><i>how a request works</i></span></div><div class="hw-m me">Need local P2C methods for Pakistan.</div><div class="hw-m">We have a partner.</div><div class="hw-m ok"><span>Member terms</span><b>−0.25%</b> on JazzCash deposits</div></div></div></section>
 <section class="sec wrap ox oxc" id="how"><div class="ohd sh ohd1"><h2 class="D rv">What members<br><span class="or">get.</span></h2></div><ul class="ocs"><li class="oc rv"><div class="m"><b>Payments</b><i>Bangladesh</i></div><b class="D v">−0.25%</b><div class="ds"><b>on deposit fees</b><i>P2C local methods</i></div><div class="f"><i></i>Member offer</div></li><li class="oc rv"><div class="m"><b>Casino platform</b><i>LATAM</i></div><b class="D v">−$10 000</b><div class="ds"><b>on setup fee</b><i>White label & turnkey</i></div><div class="f"><i></i>Member offer</div></li><li class="ocw"><a href="#join" class="oc mr rv"><div class="m"><b>More offers</b><i>Inside the club</i></div><b class="D v">More<i><svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 6h8.5M7 2.8L10.2 6 7 9.2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></i></b><div class="ds"><b>offers for members</b><i>Licensing · Traffic · Analytics · Games · Legal</i></div><div class="f"><i></i>Join to unlock</div></a></li></ul></section>
 <section class="sec wrap vtt vtt1" id="vetted"><div class="sh"><h2 class="D rv">Only the top<br><span class="or">8% get in.</span></h2></div><ol class="vf"><li class="rv" style="--w:100%;--d:0.0s"><em>01</em><b>Application</b></li><li class="rv" style="--w:76%;--d:0.12s"><em>02</em><b>Terms review</b></li><li class="rv" style="--w:52%;--d:0.24s"><em>03</em><b>Reference reviews</b></li><li class="top rv" style="--w:30%;--d:.36s"><em>04</em><b>Curia partners</b><strong class="D">8%</strong></li></ol><div class="vm"><b class="D vm-n">8%</b><p class="vm-c"><b>8 of 100</b> services that apply get in.</p><ol class="vm-s"><li><em>01</em>Application</li><li><em>02</em>Terms review</li><li><em>03</em>Reference reviews</li></ol><div class="vm-g" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i></div></div></section>

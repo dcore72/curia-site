@@ -2458,9 +2458,67 @@ body.cj2d .e26chip b{color:var(--or);font-weight:700}
 body.cj2d .e26chip i{width:8px;height:8px;border-radius:50%;background:var(--or)}
 body.cj2d .e26c .e26o .sh{text-align:center}
 body.cj2d .e26{padding-bottom:0}
+/* ===== o48: club block on desktop ===== */
+.cp5 br.cbr{display:none}
+@media(min-width:901px){
+/* DA: headline on top in two lines, wide card with three columns */
+body.cda .cp5-g{display:block}
+body.cda .cp5 .sh h2{max-width:none}
+body.cda .cp5-card{margin-top:56px}
+body.cda .cp5-card dl{grid-template-columns:repeat(3,minmax(0,1fr))}
+body.cda .cp5-card dl>div{display:flex!important;flex-direction:column;align-items:flex-start!important;gap:14px;padding:30px 0 30px 32px!important;border-bottom:0;border-left:1px solid rgba(242,240,235,.1)}
+body.cda .cp5-card dl>div:first-child{padding-left:0!important;border-left:0}
+body.cda .cp5-card dd{font-size:clamp(64px,6.4vw,104px)!important}
+body.cda .cp5-card dl{border-bottom:1px solid rgba(242,240,235,.1)}
+/* DB: side by side, headline set in four even lines */
+body.cdb .cp5 br.cbr{display:inline}
+body.cdb .cp5-g{grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:72px}
+body.cdb .cp5 .sh h2{max-width:none;font-size:clamp(56px,6.2vw,104px);line-height:.92}
+/* DC: headline on top, card as a wide table */
+body.cdc .cp5-g{display:block}
+body.cdc .cp5 .sh h2{max-width:none}
+body.cdc .cp5-card{margin-top:56px;padding:34px 44px}
+body.cdc .cp5-card dl>div{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;padding:26px 0!important}
+body.cdc .cp5-card dd{font-size:clamp(64px,6vw,100px)!important}
+body.cdc .cp5-card dl>div>span{font-size:20px!important}
+body.cdc .cp5-card dl>div>span em{display:inline!important}body.cdc .cp5-card dl>div>span i{display:inline!important}
+}
+/* ===== o49: DA refined ===== */
+.cp5-roles{display:none}
+@media(min-width:901px){
+body.cda .cp5-card{padding:34px 40px}
+body.cda .cp5-card dl>div{align-items:center!important;text-align:center;padding:40px 24px!important;gap:16px}
+body.cda .cp5-card dl>div:first-child{padding-left:24px!important}
+body.cda .cp5-card dt{display:none}
+body.cda .cp5-card dd{font-size:clamp(64px,5.8vw,88px)!important;font-stretch:112%;line-height:.85;white-space:nowrap}
+/* A: label above, one line, small caps */
+body.cda1 .cp5-card dl>div>span{order:-1;margin:0!important;white-space:nowrap!important;font:700 12px/1 var(--sans)!important;letter-spacing:.18em;text-transform:uppercase;color:var(--mu2)!important}
+body.cda1 .cp5-card dl>div>span em{display:inline!important}body.cda1 .cp5-card dl>div>span i{display:inline!important}
+/* B: numbers only, roles move to the card footer */
+body.cda2 .cp5-card dl>div>span{display:none!important}
+body.cda2 .cp5-roles{display:inline;margin-left:auto;margin-right:24px}
+body.cda2 .cp5-card dl>div{padding:48px 24px!important}
+/* C: label below, one line, centred */
+body.cda3 .cp5-card dl>div>span{margin:0!important;white-space:nowrap!important;font:500 17px/1.3 var(--sans)!important;color:var(--wh)!important}
+body.cda3 .cp5-card dl>div>span em{display:inline!important}body.cda3 .cp5-card dl>div>span i{display:inline!important}
+}
+/* ===== o50: desktop keeps the approved numbers row, card only on mobile ===== */
+.cp5-dn{display:none}
+@media(min-width:901px){
+body.cdn .cp5-card{display:none}
+body.cdn .cp5-g{display:block}
+body.cdn .cp5 .sh h2{max-width:16ch}
+body.cdn .cp5-dn{display:grid;margin-top:64px}
+}
+/* o51: final tidy of the desktop club block */
+@media(min-width:901px){
+body.cdn .cp5 .sh h2{max-width:none;font-size:clamp(44px,6.8vw,104px)}
+body.cdn .cp5-dn{border-top:1px solid #2a2a2a;column-gap:28px}
+body.cdn .cp5-dn .row{border-top:0;padding-top:32px;gap:16px}
+}
 </style>
 </head>
-<body id="top" class="m30 hm1 m31 of1 vg1 cj2 cj2d cpa jmin jq3">
+<body id="top" class="m30 hm1 m31 of1 vg1 cj2 cj2d cpa jmin jq3 cdn">
 <header id="hdr" class="hn1"><div class="wrap hb hbn">
 <div class="lft"><a class="lg" href="index.html" aria-label="Curia"><svg width="40" height="26" viewBox="0 0 44 28" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="#F2F0EB" stroke-width="2.6"/><circle cx="30" cy="14" r="11" fill="none" stroke="#FF5A1F" stroke-width="2.6"/></svg><b>CURIA</b></a><i class="sep"></i><div class="aud" role="navigation" aria-label="Audience"><a href="index.html">Operators</a><a href="partners.html" class="on">Partners</a></div></div>
 <nav><a href="#who">Curia Circle</a><a href="#how">Intros</a><a href="#seats">Spots</a></nav>
