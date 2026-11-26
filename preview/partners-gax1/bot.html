@@ -2258,7 +2258,7 @@ body.nolead #club .sh .lead{display:none}
 .gx-i{grid-area:i}.gx-x{grid-area:x}.gx-s{grid-area:s}.gx-e{grid-area:e}
 .gx-h{display:flex;gap:12px;align-items:baseline;font:700 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--wh);position:relative;z-index:2}
 .gx-h em{font-style:normal;color:var(--or)}
-.gx-v{display:flex;align-items:center;justify-content:center;padding:24px 0}
+.gx-v{flex:1;display:flex;align-items:center;justify-content:center;padding:24px 0}
 .gx-p{margin:0;font:500 16px/1.4 var(--sans);color:var(--mu2);position:relative;z-index:2}
 .gx-i .hw-t{width:min(100%,520px);margin:0;opacity:1!important;transform:none!important}
 .gx-i .hw-t .hw-m{opacity:1!important;transform:none!important}
@@ -2272,7 +2272,7 @@ body.nolead #club .sh .lead{display:none}
 .gx-e .gx-v::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,5,.8),rgba(5,5,5,0) 38%,rgba(5,5,5,0) 60%,rgba(5,5,5,.9))}
 .gx-chip{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:rgba(10,10,10,.75);border:1px solid rgba(255,255,255,.14);font:700 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--wh);white-space:nowrap}
 .gx-chip i{width:8px;height:8px;border-radius:50%;background:var(--or)}
-.gx-e .gx-p{color:#d9d9d9}
+.gx-e .gx-p{color:#d9d9d9}.gx-p:empty{display:none}
 .wga .lead{max-width:none}
 .gx-x .gx-v{align-items:center}
 .gx-ro{width:100%;display:flex;flex-direction:column;gap:8px}
@@ -2280,7 +2280,7 @@ body.nolead #club .sh .lead{display:none}
 .gx-ro .r span{flex:1;font-weight:700;color:var(--wh)}
 .gx-ro .r i{font-style:normal;font-size:13px;color:var(--mu2)}
 .gx-ro .r.on{background:#1A0E08;border:1px solid rgba(255,90,31,.55);padding:16px}
-.gx-ro .r.on span{color:var(--or);font:700 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;flex:none}
+.gx-ro .r.on span{flex:1;color:var(--or);font:700 15px/1.2 var(--sans)}
 .gx-ro .r.on b{flex:1;font:700 16px/1.2 var(--sans);color:var(--wh)}
 .gx-ro .r.on .lk{color:var(--or);font:700 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase}
 .gx-ro .r:not(.on){opacity:.55}
@@ -2320,7 +2320,7 @@ body.nolead #club .sh .lead{display:none}
 .gx-t{min-height:0;padding:20px 20px 22px;border-radius:18px}.gx-v{padding:20px 0}.gx-p{font-size:14.5px}
 .gx-x .gx-v b.D{font-size:110px}
 .gx-e{min-height:300px}
-.gx-i .hw-t{padding:14px}.gx-ro .r.on span{display:none}.gx-lc .m b{white-space:nowrap}
+.gx-i .hw-t{padding:14px}.gx-lc .m b{white-space:nowrap}
 .gp{gap:36px;margin-top:36px}.gp-c{padding-top:22px}.gp-c b.D{margin:18px 0 10px;font-size:clamp(30px,9vw,38px)}.gp-c p{font-size:16px;margin-bottom:20px}
 .gy{grid-template-columns:1fr;gap:0;margin-top:36px;padding-left:34px}
 .gy::before{left:7px;right:auto;top:8px;bottom:8px;width:1px;height:auto}
