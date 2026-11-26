@@ -2272,6 +2272,11 @@ body.nolead #club .sh .lead{display:none}
 .gx-e .gx-v::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,5,.8),rgba(5,5,5,0) 38%,rgba(5,5,5,0) 60%,rgba(5,5,5,.9))}
 .gx-chip{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:rgba(10,10,10,.75);border:1px solid rgba(255,255,255,.14);font:700 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--wh);white-space:nowrap}
 .gx-chip i{width:8px;height:8px;border-radius:50%;background:var(--or)}
+.gx-chip.gchm{padding:18px 28px;gap:14px;font-size:15px;letter-spacing:.16em}.gx-chip.gchm i{width:11px;height:11px}
+.gx-chip.gchl{flex-direction:column;align-items:flex-start;gap:12px;padding:24px 30px;border-radius:20px;background:rgba(10,10,10,.72)}
+.gx-chip.gchl b{font:700 clamp(24px,2.2vw,32px)/1 var(--sans);letter-spacing:0;text-transform:none;color:var(--wh)}
+.gx-chip.gchl span{display:flex;align-items:center;gap:10px;color:var(--or)}.gx-chip.gchl span::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--or)}
+@media(max-width:600px){.gx-chip.gchm{padding:14px 20px;font-size:12.5px}.gx-chip.gchl{padding:18px 22px}.gx-chip.gchl b{font-size:22px}}
 .gx-e .gx-p{color:#d9d9d9}.gx-p:empty{display:none}
 .wga .lead{max-width:none}
 .gx-x .gx-v{align-items:center}
