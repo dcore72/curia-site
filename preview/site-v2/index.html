@@ -2502,6 +2502,21 @@ body.of1 #how.ofv .oc .ds{padding-bottom:18px}
 .gx-1r .hw-m{opacity:1!important;transform:none!important}
 .gx-1r .hw-m.ok{margin-top:4px}
 .gx-1n{margin-top:12px;font:500 13px/1.3 var(--sans);color:var(--mu)}
+/* get · fit first row + heading in one screen (desktop) */
+@media(min-width:901px){
+.wga.gf1 .gx,.wga.gf2 .gx,.wga.gf3 .gx{margin-top:40px;gap:16px}
+.wga.gf1 .gx-t,.wga.gf2 .gx-t,.wga.gf3 .gx-t{min-height:300px;padding:22px 24px 22px}
+.wga.gf1 .gx-v,.wga.gf2 .gx-v,.wga.gf3 .gx-v{padding:18px 0}
+.wga.gf1 .gx-i .hw-t,.wga.gf2 .gx-i .hw-t,.wga.gf3 .gx-i .hw-t{padding:14px;gap:8px;width:min(100%,480px)}
+.wga.gf1 .gx-i .hw-th,.wga.gf2 .gx-i .hw-th,.wga.gf3 .gx-i .hw-th{padding-bottom:10px}
+.wga.gf1 .gx-i .hw-m,.wga.gf2 .gx-i .hw-m,.wga.gf3 .gx-i .hw-m{font-size:14px;padding:9px 13px}
+.wga.gf1 .gx-ro .r,.wga.gf2 .gx-ro .r,.wga.gf3 .gx-ro .r{padding:12px 16px}
+.wga.gf1 .gx-p,.wga.gf2 .gx-p,.wga.gf3 .gx-p{font-size:15px}
+.wga.gf2>.sh,.wga.gf3>.sh{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:end;column-gap:64px}
+.wga.gf2 .sh .lead,.wga.gf3 .sh .lead{margin:0 0 6px;max-width:440px;justify-self:end;text-align:left}
+.wga.gf3 .sh h2.D{font-size:clamp(48px,5.4vw,84px)}
+.wga.gf3 .gx-t{min-height:280px}
+}
 /* get · B pillars */
 .wgb .lead{max-width:none}
 .gp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:64px}
@@ -2960,6 +2975,10 @@ body.of1 #how.ox .oc.mr{transition:none}
   var st=document.querySelectorAll('.flow .st');
   if(st.length){var fi=0;setInterval(function(){if(reduce)return;st.forEach(function(s,j){s.classList.toggle('on',j===fi)});fi=(fi+1)%st.length},2200);st[0].classList.add('on')}
 })();
-</script>
+
+(function(){try{var ok=/^[A-Za-z0-9_-]{1,40}$/,r=null,q=new URLSearchParams(location.search).get('ref');
+if(q&&ok.test(q)){r=q;try{sessionStorage.setItem('curia_ref',q)}catch(e){}}else{try{var s=sessionStorage.getItem('curia_ref');if(s&&ok.test(s))r=s}catch(e){}}
+if(!r)return;var re=/^https:\/\/t\.me\/(CuriaCBot|CuriaPartnersBot)\/?$/;
+document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(re.test(h))a.setAttribute('href',h.replace(/\/$/,'')+'?start=ag_'+r)})}catch(e){}})();</script>
 </body>
 </html>
